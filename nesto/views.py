@@ -12,4 +12,4 @@ def home(request):
     projects = Projects.objects.all()
 
     context = {'about': about, 'achievements':achievements,'skills':skills, 'banner':banner,'courses':courses, 'work':work,'projects':projects}
-    return render(request, 'portfolio.html', context)
+    return render(request, 'home.html',context)

@@ -51,12 +51,20 @@ class Education(models.Model):
     course = models.CharField(max_length=50)
     description = models.TextField()
 
+    class Meta:
+        verbose_name = "Education"
+        verbose_name_plural = "Education"
+
     def __str__(self):
-        return Education
+        return "Education"
 
 class WorkExperience(models.Model):
     role = models.CharField(max_length=50)
     description = models.TextField()
+
+    class Meta:
+        verbose_name = "Work Experience"
+        verbose_name_plural = "Work Experience"
 
     def __str__(self):
         return "role"
