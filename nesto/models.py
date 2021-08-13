@@ -48,7 +48,9 @@ class Banner(models.Model):
         return "Banner"
 
 class Education(models.Model):
+    school = models.CharField(max_length=50, null=True)
     course = models.CharField(max_length=50)
+
     description = models.TextField()
 
     class Meta:
@@ -59,6 +61,7 @@ class Education(models.Model):
         return "Education"
 
 class WorkExperience(models.Model):
+    org = models.CharField(max_length=50, null=True)
     role = models.CharField(max_length=50)
     description = models.TextField()
 

@@ -1,0 +1,164 @@
+<style>
+  html,
+  body,
+  header,
+  .view {
+    height: 100%;
+  }
+
+  .md-pills .nav-link.active {
+    color: #fff;
+    background-color: #616161;
+  }
+  button.close {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    padding-right: 1rem;
+    padding-top: 0.6rem;
+  }
+</style>
+<!-- Portfolio starts -->
+<div style="background-color: #222">
+  <div class="container my-5">
+    <!-- Section -->
+    <section>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="basicExampleModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-lg modal-dialog-centered"
+          role="document"
+        >
+          <div class="modal-content">
+            <div class="modal-body p-0">
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+
+              <!-- Grid row -->
+              <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-6 py-5 pl-5">
+                  <h5 class="font-weight-normal mb-3">Paper cup mockup</h5>
+
+                  <p class="text-muted">
+                    Key letters, explain which writing we he carpeting or fame,
+                    the itch expand medical amped through constructing time. And
+                    scarfs, gain, get showed accounts decades.
+                  </p>
+
+                  <ul class="list-unstyled font-small mt-5">
+                    <li>
+                      <p class="text-uppercase mb-2"><strong>Client</strong></p>
+                      <p class="text-muted mb-4">Envato Inc.</p>
+                    </li>
+
+                    <li>
+                      <p class="text-uppercase mb-2"><strong>Date</strong></p>
+                      <p class="text-muted mb-4">June 27, 2019</p>
+                    </li>
+
+                    <li>
+                      <p class="text-uppercase mb-2"><strong>Skills</strong></p>
+                      <p class="text-muted mb-4">
+                        Design, HTML, CSS, Javascript
+                      </p>
+                    </li>
+
+                    <li>
+                      <p class="text-uppercase mb-2">
+                        <strong>Address</strong>
+                      </p>
+                      <a
+                        href="https://mdbootstrap.com/docs/jquery/design-blocks/"
+                        >MDBootstrap</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-6">
+                  <div class="view rounded-right">
+                    <img
+                      class="img-fluid"
+                      src="https://mdbootstrap.com/img/Photos/Vertical/5.jpg"
+                      alt="Sample image"
+                    />
+                  </div>
+                </div>
+                <!-- Grid column -->
+              </div>
+              <!-- Grid row -->
+            </div>
+          </div>
+        </div>
+      </div>
+<br>
+<br>
+      <h6
+        class="font-weight-bold text-center white-text text-uppercase small mb-4"
+      >
+        PROJECTS
+      </h6>
+      <hr class="w-header my-4" />
+      <p class="lead text-center light-text pt-2 mb-5">
+        These projects have been built on a few frameworks entailing Django,Flask and Angular.
+      </p>
+
+
+      <!--Tab panels-->
+      <div class="tab-content mb-5">
+        <!--Panel 1-->
+        <div class="tab-pane fade show in active" id="panel31" role="tabpanel">
+          <!-- Grid row -->
+          <div class="row">
+            <!-- Grid column -->
+            {% for projects in projects %}
+            <div class="col-md-12 col-lg-6">
+              <!-- Card -->
+              <a
+                class="card hoverable mb-4 bg-dark"
+                data-toggle="modal"
+                data-target="#basicExampleModal"
+              >
+                <!-- Card image -->
+                <img
+                  class="card-img-top"
+                  src="{{projects.image.url}}"
+                  alt="Card image cap"
+                />
+                <!-- Card content -->
+                <div class="card-body">
+                  <h5 class="my-3 white-text">{{projects.title}}</h5>
+                  <p class="card-text text-uppercase mb-3 light-text">{{projects.description}}</p>
+                </div>
+              </a>
+              <!-- Card -->
+            </div>
+            <!-- Grid column -->
+            {% endfor %}
+          <!-- Grid row -->
+        </div>
+        <!--Panel 1-->
+      </div>
+      <!--Tab panels-->
+      </div>
+    </section>
+    <!-- Section -->
+  </div>
+</div>
+<!-- portfolio ends -->

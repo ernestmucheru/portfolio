@@ -1,3 +1,4 @@
+{% load bootstrap4 %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -6,63 +7,463 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ernest Mucheru</title>
+	<!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static 'css/styles.css'%}" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+    <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet" />
+    <link href="{% static 'css/mdb.min.css'%}" rel="stylesheet" />
+    <link href="{% static 'css/main.css'%}" rel="stylesheet" />
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="{% static 'css/style.css'%}" rel="stylesheet" />
+    <style>
 
-    <!-- CSS Linking -->
-    <link rel="shortcut icon" href="favicon.ico">
-
-	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Flexslider  -->
-	<link rel="stylesheet" href="css/flexslider.css">
-	<!-- Flaticons  -->
-	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
-
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-
-	</head>
+        html,
+        body,
+        header,
+        .view {
+          height: 100%;
+        }
+      
+        @media (max-width: 740px) {
+          html,
+          body,
+          header,
+          .view {
+            height: 100vh;
+          }
+        }
+      
+        .top-nav-collapse {
+          background-color: #82b1ff !important;
+        }
+      
+        .navbar:not(.top-nav-collapse) {
+          background: transparent !important;
+        }
+      
+        @media (max-width: 991px) {
+         .navbar:not(.top-nav-collapse) {
+          background: #82b1ff !important;
+         }
+        }
+        
+        h5 {
+          letter-spacing: 3px;
+        }
+      
+      </style>
+      
 </head>
-<body>
+<body style="background-color: #222;" >
+  <!-- Header start -->
 
-    {% block content %} 
+  <!-- Main navigation -->
+  <header>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <strong>Ernest Mucheru</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
+          aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Education and Careers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About Me</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Skills</a>
+            </li>
+          </ul>
+          <!-- <form class="form-inline">
+            <div class="md-form my-0">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            </div>
+          </form> -->
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+    <!-- Full Page Intro -->
+    <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url('/static/img/marius-niveri-rfg4l6_lu3c-unsplash.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; filter: grayscale(100%);">
+      <!-- Mask & flexbox options-->
+      <div class="mask rgba-white-light d-flex justify-content-center align-items-center">
+        <!-- Content -->
+        <div class="container">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-md-12 white-text text-center">
+              <h1 class="display-3 mb-0 pt-md-5 pt-5 white-text font-weight-bold wow fadeInDown" data-wow-delay="0.3s">ERNEST MUCHERU
+                <!-- <a class="indigo-text font-weight-bold">MUCHERU</a> -->
+              </h1>
+              <h5 class="text-uppercase pt-md-5 pt-sm-2 pt-5 pb-md-5 pb-sm-3 pb-5 white-text font-weight-bold wow fadeInDown"
+                data-wow-delay="0.3s">Web developer & designer</h5>
+              <div class="wow fadeInDown" data-wow-delay="0.3s">
+                <a class="btn btn-outline-dark btn-lg btn-rounded">ABout Me</a>
+                <a class="btn btn-dark btn-lg btn-rounded">Projects</a>
+              </div>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </div>
+        <!-- Content -->
+      </div>
+      <!-- Mask & flexbox options-->
+    </div>
+    <!-- Full Page Intro -->
+  </header>
+  <!-- Main navigation -->
 
-    {% endblock %}
+<script>new WOW().init();</script>
+  <!-- Header End -->
+   
+<!-- Portfolio start -->
 
-    <!-- JS Linking -->
-<!-- jQuery -->
-<script src="js/jquery.min.js"></script>
-<!-- jQuery Easing -->
-<script src="js/jquery.easing.1.3.js"></script>
-<!-- Bootstrap -->
-<script src="js/bootstrap.min.js"></script>
-<!-- Waypoints -->
-<script src="js/jquery.waypoints.min.js"></script>
-<!-- Flexslider -->
-<script src="js/jquery.flexslider-min.js"></script>
-<!-- Owl carousel -->
-<script src="js/owl.carousel.min.js"></script>
-<!-- Counters -->
-<script src="js/jquery.countTo.js"></script>
+<style>
+    html,
+    body,
+    header,
+    .view {
+      height: 100%;
+    }
+  
+    .md-pills .nav-link.active {
+      color: #fff;
+      background-color: #616161;
+    }
+    button.close {
+      position: absolute;
+      right: 0;
+      z-index: 2;
+      padding-right: 1rem;
+      padding-top: 0.6rem;
+    }
+  </style>
+  <!-- Portfolio starts -->
+  <div style="background-color: #222">
+    <div class="container my-5">
+      <!-- Section -->
+      <section>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="basicExampleModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div
+            class="modal-dialog modal-lg modal-dialog-centered"
+            role="document"
+          >
+            <div class="modal-content">
+              <div class="modal-body p-0">
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+  
+                <!-- Grid row -->
+                <div class="row">
+                  <!-- Grid column -->
+                  <div class="col-md-6 py-5 pl-5">
+                    <h5 class="font-weight-normal mb-3">Paper cup mockup</h5>
+  
+                    <p class="text-muted">
+                      Key letters, explain which writing we he carpeting or fame,
+                      the itch expand medical amped through constructing time. And
+                      scarfs, gain, get showed accounts decades.
+                    </p>
+  
+                    <ul class="list-unstyled font-small mt-5">
+                      <li>
+                        <p class="text-uppercase mb-2"><strong>Client</strong></p>
+                        <p class="text-muted mb-4">Envato Inc.</p>
+                      </li>
+  
+                      <li>
+                        <p class="text-uppercase mb-2"><strong>Date</strong></p>
+                        <p class="text-muted mb-4">June 27, 2019</p>
+                      </li>
+  
+                      <li>
+                        <p class="text-uppercase mb-2"><strong>Skills</strong></p>
+                        <p class="text-muted mb-4">
+                          Design, HTML, CSS, Javascript
+                        </p>
+                      </li>
+  
+                      <li>
+                        <p class="text-uppercase mb-2">
+                          <strong>Address</strong>
+                        </p>
+                        <a
+                          href="https://mdbootstrap.com/docs/jquery/design-blocks/"
+                          >MDBootstrap</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Grid column -->
+  
+                  <!-- Grid column -->
+                  <div class="col-md-6">
+                    <div class="view rounded-right">
+                      <img
+                        class="img-fluid"
+                        src="https://mdbootstrap.com/img/Photos/Vertical/5.jpg"
+                        alt="Sample image"
+                      />
+                    </div>
+                  </div>
+                  <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+              </div>
+            </div>
+          </div>
+        </div>
+  <br>
+  <br>
+        <h6
+          class="font-weight-bold text-center white-text text-uppercase small mb-4"
+        >
+          PROJECTS
+        </h6>
+        <hr class="w-header my-4" />
+        <p class="lead text-center light-text pt-2 mb-5">
+          These projects have been built on a few frameworks entailing Django,Flask and Angular.
+        </p>
+  
+  
+        <!--Tab panels-->
+        <div class="tab-content mb-5">
+          <!--Panel 1-->
+          <div class="tab-pane fade show in active" id="panel31" role="tabpanel">
+            <!-- Grid row -->
+            <div class="row">
+              <!-- Grid column -->
+              {% for projects in projects %}
+              <div class="col-md-12 col-lg-6">
+                <!-- Card -->
+                <a
+                  class="card hoverable mb-4 bg-dark"
+                  
+                  href="{{projects.livelink}}""
+                >
+                  <!-- Card image -->
+                  <img
+                    class="card-img-top"
+                    src="{{projects.image.url}}"
+                    alt="Card image cap" style="min-height:370px; max-height:370px;"
+                  />
+                  <!-- Card content -->
+                  <div class="card-body">
+                    <h5 class="my-3 white-text">{{projects.title}}</h5>
+                    <p class="card-text text-uppercase mb-3 light-text">{{projects.description}}</p>
+                  </div>
+                </a>
+                <!-- Card -->
+              </div>
+              <!-- Grid column -->
+              {% endfor %}
+            <!-- Grid row -->
+          </div>
+          <!--Panel 1-->
+        </div>
+        <!--Tab panels-->
+        </div>
+      </section>
+      <!-- Section -->
+    </div>
+  </div>
+  <!-- portfolio ends -->
+  
+<!-- Portfolio end -->
+
+<!-- Education starts -->
+<div style="background-color: #222">
 
 
-<!-- MAIN JS -->
-<script src="js/main.js"></script>
+    <div class="container">
+      <br>
+    <br>
+          <h6
+            class="font-weight-bold text-center white-text text-uppercase small mb-4"
+          >
+            EDUCATION
+          </h6>
+          <!-- <hr class="w-header my-4" /> -->
+          <!-- <p class="lead text-center light-text pt-2 mb-5">
+            These projects have been built on a few frameworks entailing Django,Flask and Angular.
+          </p> -->
+        <div class="card-columns ">
+          {% for course in courses %}
+            <div class="card mt-2 mb-3 bg-dark">
+              <div class="card-body">
+                <h5 class="card-title text-muted">{{course.school}}</h5>
+                <h5 class="card-title white-text">{{course.course}}</h5>
+                
+                <p class="card-text light-text">{{course.description}}</p>
+              </div>
+            </div>     
+            {% endfor %}
+          </div>
+    
+    
+          <br>
+          <br>
+                <h6
+                  class="font-weight-bold text-center white-text text-uppercase small mb-4"
+                >
+                  WORK
+                </h6>
+                <!-- <hr class="w-header my-4" /> -->
+                <!-- <p class="lead text-center light-text pt-2 mb-5">
+                  These projects have been built on a few frameworks entailing Django,Flask and Angular.
+                </p> -->
+              <div class="card-columns ">
+                {% for work in work %}
+                  <div class="card mt-2 mb-3 bg-dark">
+                    <div class="card-body">
+                    <h5 class="card-title text-muted">{{work.org}}</h5>
+                      <h5 class="card-title white-text">{{work.role}}</h5>
+                      <p class="card-text light-text">{{work.description}}</p>
+                    </div>
+                  </div>     
+                  {% endfor %}
+                </div>
+    </div>
+    </div>
+    
+    <!-- Education ends -->
+    <!-- services starts -->
+<div style="background-color:#222">
 
+    <div class="container my-5 p-5 ">
+    
+    
+        <!--Section: Content-->
+        <section class="text-center white-text">
+      
+          <!-- Section heading -->
+          <h2 class="font-weight-bold mb-4 pb-2 text-uppercase text white-text">Services Offered</h2>
+          <!-- Section description -->
+         
+      <br>
+      
+          <!-- Grid row -->
+          <div class="row">
+            {% for skill in skills %}
+            <!-- Grid column -->
+            <div class="col-md-4 mb-4">
+      
+              <i class="fas fa-brain fa-3x purple-text"></i>
+              <h5 class="font-weight-bold my-4 text-uppercase dark-grey-text">{{skill.title}}</h5>
+              <p class="mb-md-0 mb-5 light-text">{{skill.description}}</p>
+      
+            </div>
+            <!-- Grid column -->
+      {% endfor %}
+          </div>
+          <!-- Grid row -->
+      
+        </section>
+        <!--Section: Content-->
+    
+      </div>
+
+      <!-- about me -->
+<div class="container my-5 ">
+
+
+    <!--Section: Content-->
+    <section class="dark-grey-text">
+  
+      <div class="row pr-lg-5">
+        <div class="col-md-7 mb-4">
+  
+          <div class="view">
+            <img src="/static/img/me.jpg" class="img-fluid" alt="smaple image">
+          </div>
+  
+        </div>
+        <div class="col-md-5 d-flex align-items-center">
+          <div>
+            
+            <h3 class="font-weight-bold mb-4 white-text">About Me</h3>
+  
+              <p>I took up the Moringa software development class because I believed in Moringa school. I saw it as an oppertunity to quench my never eneding thirst of getting to understand computers better which has always been my vision ever since I was a little boy. I fell in love with how the computer felt as such a visionary tool and taking up this course was just another of my little steps in getting to understand a speck in the computing world. For me it doesn't really end here. As a painter understands his different sets of brushes, I'm still on my mission to learn each and every aspect of this powerful tool that never seizes to amaze.</p>
+  
+             <a href="https://drive.google.com/file/d/1p5sfmJOllllufv-_vJsHN9Mxyq8__9Mw/view?usp=sharing"> <button type="button" class="btn btn-grey btn-rounded mx-0" >Download vc</button></a>
+  
+          </div>
+        </div>
+      </div>
+  
+    </section>
+    <!--Section: Content-->
+  
+  
+  </div>
+<!-- about me ends -->
+
+	
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="{% static 'js/scripts.js'%}"></script>
+    <script src="{% static 'js/popper.js'%}"></script>
+    <script src="{% static 'theme/js/mdb.min.js'%}"></script>
+    <script src="{% static 'js/main.js'%}"></script>
+    <script src="{% static 'js/jquery-3.4.1.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap.min.js'%}"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
 </body>
 </html>

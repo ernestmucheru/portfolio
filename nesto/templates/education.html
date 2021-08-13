@@ -1,0 +1,53 @@
+<!-- Education starts -->
+<div style="background-color: #222">
+
+
+<div class="container">
+  <br>
+<br>
+      <h6
+        class="font-weight-bold text-center white-text text-uppercase small mb-4"
+      >
+        EDUCATION
+      </h6>
+      <!-- <hr class="w-header my-4" /> -->
+      <p class="lead text-center light-text pt-2 mb-5">
+        These projects have been built on a few frameworks entailing Django,Flask and Angular.
+      </p>
+    <div class="card-columns ">
+      {% for course in courses %}
+        <div class="card mt-2 mb-3 bg-dark">
+          <div class="card-body">
+            <h5 class="card-title white-text">{{course.course}}</h5>
+            <p class="card-text light-text">{{course.description}}</p>
+          </div>
+        </div>     
+        {% endfor %}
+      </div>
+
+
+      <br>
+      <br>
+            <h6
+              class="font-weight-bold text-center white-text text-uppercase small mb-4"
+            >
+              WORK
+            </h6>
+            <!-- <hr class="w-header my-4" /> -->
+            <p class="lead text-center light-text pt-2 mb-5">
+              These projects have been built on a few frameworks entailing Django,Flask and Angular.
+            </p>
+          <div class="card-columns ">
+            {% for work in work %}
+              <div class="card mt-2 mb-3 bg-dark">
+                <div class="card-body">
+                  <h5 class="card-title white-text">{{work.role}}</h5>
+                  <p class="card-text light-text">{{work.description}}</p>
+                </div>
+              </div>     
+              {% endfor %}
+            </div>
+</div>
+</div>
+
+<!-- Education ends -->
