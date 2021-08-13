@@ -1,1 +1,1 @@
-web: gunicorn nesto.wsgi
+web: gunicorn resume.wsgi
